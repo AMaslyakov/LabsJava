@@ -13,7 +13,9 @@ public class example8 {
     System.out.print("введите своё отчество: ");
     String patronymic_surname = input.nextLine();
 
-    System.out.printf("Hallo %s %s %s\n", surname, name, patronymic_surname);
-
+    System.out.printf(
+        "Hallo %s %s %s\n",
+        surname, name, patronymic_surname
+        );
   }
 }

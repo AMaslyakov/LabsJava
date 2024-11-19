@@ -13,6 +13,9 @@ public class example12 {
     int age; 
     age = calc_age(year_born);
 
-    System.out.printf("Возраст человека рожденного %d году, %d лет\n", year_born, age);
+    System.out.printf(
+        "Возраст человека рожденного в %d году, %d лет\n",
+        year_born, age
+        );
   }
 }

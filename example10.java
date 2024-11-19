@@ -5,13 +5,14 @@ public class example10 {
     Scanner input = new Scanner(System.in);
     System.out.println("Какой сегодня день недели?");
     String weekday = input.next();
-
     System.out.println("Какой сегодня месяц?");
     String month = input.next();
-
     System.out.println("Какой сегодня день месяца?");
     int monthday = input.nextInt();
 
-    System.out.printf("Сегодня: %s %d %s\n", weekday, monthday, month);
+    System.out.printf(
+        "Сегодня: %s %d %s\n",
+        weekday, monthday, month
+        );
   }
 }
