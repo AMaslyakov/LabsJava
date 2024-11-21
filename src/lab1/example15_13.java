@@ -1,6 +1,8 @@
+package src.lab1;
+
 import java.util.Scanner;
 
-public class example13 {
+public class example15_13 {
   public static int calc_age(int year_born) {
     int current_year = 2024;
     return current_year - year_born;

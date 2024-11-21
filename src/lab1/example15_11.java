@@ -1,6 +1,8 @@
+package src.lab1;
+
 import java.util.Scanner;
 
-public class example11 {
+public class example15_11 {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
     System.out.println("Введите название месяца:");

@@ -1,6 +1,8 @@
+package src.lab1;
+
 import java.util.Scanner;
 
-public class example18 {
+public class example15_18 {
 
     public static double hyp(double a, double b){
         return Math.sqrt(a*a + b*b);

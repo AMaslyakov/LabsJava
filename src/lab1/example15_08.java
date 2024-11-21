@@ -1,6 +1,8 @@
+package src.lab1;
+
 import java.util.Scanner;
 
-public class example8 {
+public class example15_08 {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
 

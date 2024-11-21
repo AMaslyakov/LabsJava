@@ -1,6 +1,8 @@
+package src.lab1;
+
 import java.util.Scanner;
 
-public class example10 {
+public class example15_10 {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
     System.out.println("Какой сегодня день недели?");

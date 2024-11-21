@@ -1,4 +1,6 @@
-public class example3 {
+package src.lab1;
+
+public class example15_03 {
   public static void main(String[] args) {
     int S, D;
     S = 10; 

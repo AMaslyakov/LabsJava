@@ -1,4 +1,6 @@
-public class example6 {
+package src.lab1;
+
+public class example15_06 {
   
     static double a =10.0, b=4.0, c;
 
