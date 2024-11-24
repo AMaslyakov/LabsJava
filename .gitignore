@@ -1,3 +1,5 @@
 .idea/
 out/
 LabsJava.iml
+/.classpath
+/.project
