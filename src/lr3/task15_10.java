@@ -1,15 +1,17 @@
 package src.lr3;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.Random;
 import java.util.Scanner;
 
-public class task15_09 {
+public class task15_10 {
 
-    public static int[] create_random_array(int size){
-        int[] numbers = new int[size];
+    public static Integer[] create_random_array(int size){
+        Integer[] numbers = new Integer[size];
         Random random = new Random();
         for (int i=0; i<numbers.length; i++){
-            numbers[i] = random.nextInt(1000);
+            numbers[i] = random.nextInt(100);
             System.out.printf(
                     "Элемент № %d массива равен: %d\n",
                     i, numbers[i]);
@@ -26,21 +28,14 @@ public class task15_09 {
             size
         );
 
-        int[] numbers = create_random_array(size);
+        Integer[] numbers = create_random_array(size);
+        Arrays.sort(numbers, Collections.reverseOrder());
 
-        int minValue = numbers[0];
-        for (int n : numbers){
-            if(n <= minValue){
-               minValue = n;
-            }
+        System.out.println(
+                "Массив отсортирован в порядке убывания:");
+        for (int number: numbers){
+            System.out.print(number+ " ");
         }
-
-        System.out.println("Минимальный элемент: " + minValue);
-        System.out.println("Имеет индекс или индексы:");
-        for(int i=0; i<numbers.length; i++){
-            if(minValue == numbers[i]){
-                System.out.print(i + " ");
-            }
-        }
+        System.out.println();
     }
 }
