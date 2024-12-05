@@ -15,8 +15,4 @@ public class task15_04_1 {
         int max_num = Math.max(first_num, second_num);
         for (int n = min_num;  n < max_num +1; n++){
             System.out.println(n);
-            }
-
-
-        }
-    }
+            }}}

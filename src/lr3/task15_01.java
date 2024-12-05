@@ -14,7 +14,7 @@ public class task15_01 {
                 System.out.println("Понедельник");
                 break;
             case 2:
-                System.out.println("Второник");
+                System.out.println("Вторник");
                 break;
             case 3:
                 System.out.println("Среда");
@@ -32,8 +32,6 @@ public class task15_01 {
                 System.out.println("Воскресенье");
                 break;
             default:
-                System.out.println("Не верно введенное число. Введите от 1 до 7.");
+                System.out.println("Ошибка! Введите от 1 до 7.");
                 break;
-        }
-    }
-}
+        }}}

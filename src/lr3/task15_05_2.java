@@ -6,11 +6,8 @@ public class task15_05_2 {
 
     public static int sum(int[] numbers){
         int sum = 0;
-        for (int number : numbers) {
-            sum += number;
-        }
-        return sum;
-    }
+        for (int number : numbers){sum += number;}
+        return sum;}
 
     public static void main(String[] args) {
 
@@ -21,23 +18,15 @@ public class task15_05_2 {
         for (int i = 0;i<N; i++){
             System.out.println("Введите число:");
             int num = input.nextInt();
-            if (num % 5 == 2 || num % 3 == 1){
-                numbers[i] = num;
-                } else {
-                    System.out.println("Заданное число не соответсвует критериям.");
-                    System.out.println("Введите другое число!");
-                    i--;
-                }
+            if (num % 5 == 2 || num % 3 == 1)
+            {numbers[i] = num;}
+            else {System.out.println("Число не соответствует критериям.");
+                  System.out.println("Введите другое число!");
+                  i--;}
             }
-
         int sum_of_numbers = sum(numbers);
         System.out.println("Числа удовлетворяющие критериям:");
-        for(int number: numbers){
-            System.out.print(number + " ");
-        }
+        for(int number: numbers){System.out.print(number + " ");}
         System.out.println();
-        System.out.printf(
-                "Сумма чисел равна: %d",
-                sum_of_numbers);
-    }
-}
+        System.out.printf("Сумма чисел равна: %d", sum_of_numbers);
+    }}

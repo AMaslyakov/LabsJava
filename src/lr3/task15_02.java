@@ -6,14 +6,13 @@ public class task15_02 {
     public static void main(String[] args) {
 
         Scanner input = new Scanner(System.in);
-        System.out.println("Введите название дня недели(в нижнем регистре):");
-        String week_day = input.nextLine();
-
+        System.out.println("Введите название дня недели:");
+        String week_day =  input.nextLine().toLowerCase();
         switch (week_day){
             case "понедельник":
                 System.out.println(1);
                 break;
-            case "второник":
+            case "вторник":
                 System.out.println(2);
                 break;
             case "среда":
@@ -34,6 +33,4 @@ public class task15_02 {
             default:
                 System.out.println("Введен не существующий день недели!");
                 break;
-        }
-    }
-}
+        }}}

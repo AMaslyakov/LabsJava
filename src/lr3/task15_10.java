@@ -12,27 +12,20 @@ public class task15_10 {
         Random random = new Random();
         for (int i=0; i<numbers.length; i++){
             numbers[i] = random.nextInt(100);
-            System.out.printf(
-                    "Элемент № %d массива равен: %d\n",
-                    i, numbers[i]);
+            System.out.printf("numbers[%d] = %d\n", i, numbers[i]);
         }
-        return numbers;
-    }
+        return numbers;}
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Задайте размер массива: ");
         int size = input.nextInt();
-        System.out.printf(
-            "Размер массива равен %d\n",
-            size
-        );
+        System.out.printf("Размер массива равен %d\n", size);
 
         Integer[] numbers = create_random_array(size);
         Arrays.sort(numbers, Collections.reverseOrder());
 
-        System.out.println(
-                "Массив отсортирован в порядке убывания:");
+        System.out.println("Массив отсортирован в порядке убывания:");
         for (int number: numbers){
             System.out.print(number+ " ");
         }
