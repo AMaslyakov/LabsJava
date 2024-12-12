@@ -13,7 +13,7 @@ public static void main(String[] args) {
     for(int i=0; i < triangle.length; i++){
         for(int j=0; j<triangle[i].length; j++){
             if(j<=i){
-                triangle[i][j] = '2';
+                triangle[i][j] = '#';
             } else { triangle[i][j] = ' ';}
         }}
     for(char[] line: triangle){System.out.println(line);
