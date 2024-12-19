@@ -1,29 +1,29 @@
 package src.lr5.task15_02;
 
 public class Symbols {
-    public char symbol_1;
-    public char symbol_2;
+    public char one;
+    public char two;
 
    public void printSymbols(){
-       int code1 = (int) symbol_1;
-       int code2 = (int) symbol_2;
+       int code1 = one;
+       int code2 = two;
        if (code1 < code2){
-           char start =symbol_1;
-           while(start != symbol_2 ){
+           char start = one;
+           while(start != two){
                System.out.print(start + " ");
                start++;
            }
-           System.out.print(symbol_2);
+           System.out.print(two);
        } else if (code2 < code1) {
-           char start = symbol_2;
-           while (start != symbol_1) {
+           char start = two;
+           while (start != one) {
                System.out.print(start + " ");
                 start++;
            }
-           System.out.print(symbol_1);
+           System.out.print(one);
 
        } else {
-           System.out.print(symbol_1);
+           System.out.print(one);
        }
        System.out.println();
    }
