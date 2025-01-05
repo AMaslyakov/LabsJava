@@ -1,4 +1,4 @@
-# Лабараторные работы по Java
+# Лабораторные работы по Java
 ## [Лабораторная работа №1](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr1)
 ## [Лабораторная работа №2](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr2)
 ## [Лабораторная работа №3](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr3)
