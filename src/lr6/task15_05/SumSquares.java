@@ -1,4 +1,4 @@
-package lr6.task15_05;
+package src.lr6.task15_05;
 
 public class SumSquares {
     public static long calculate(int N){

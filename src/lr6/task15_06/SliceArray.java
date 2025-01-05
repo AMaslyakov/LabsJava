@@ -1,4 +1,4 @@
-package lr6.task15_06;
+package src.lr6.task15_06;
 
 public class SliceArray {
     public static int[] cat(int[] array, int N){

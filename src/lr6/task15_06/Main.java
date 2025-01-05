@@ -1,4 +1,4 @@
-package lr6.task15_06;
+package src.lr6.task15_06;
 
 import java.util.Arrays;
 
@@ -19,6 +19,5 @@ public class Main {
         System.out.println(Arrays.toString(slice_array2));
         System.out.println(n3 + " элементов от исходного массива");
         System.out.println(Arrays.toString(slice_array3));
-
     }
 }

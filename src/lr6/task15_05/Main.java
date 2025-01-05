@@ -1,4 +1,4 @@
-package lr6.task15_05;
+package src.lr6.task15_05;
 
 public class Main {
 
@@ -6,16 +6,15 @@ public class Main {
         if(n<0){
             return 0;
         }
-        long sum = (n*(n+1)*(2*n+1))/6;
-        return sum;
-    };
+        return (n*(n+1)*(2L *n+1))/6;
+    }
 
     public static void main(String[] args) {
         int n1 = 5;
-        long sumsquares1 = SumSquares.calculate(n1);
-        long sumsquares1_check = checkSum(n1);
-        System.out.println("Сумма квадратов для " + n1 + " равна:\n" + sumsquares1);
+        long sumsquares = SumSquares.calculate(n1);
+        long sumsquares_check = checkSum(n1);
+        System.out.println("Сумма квадратов для " + n1 + " равна:\n" + sumsquares);
         System.out.println("Проверка формулой для  n = " + n1);
-        System.out.println(sumsquares1_check);
+        System.out.println(sumsquares_check);
     }
 }
