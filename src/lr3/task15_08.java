@@ -4,7 +4,7 @@ package src.lr3;
 public class task15_08 {
 
     public static boolean isVowel(char sym){
-        char[] vowels = {'A', 'E', 'I', 'O', 'U'};
+        char[] vowels = {'A', 'E', 'I', 'O', 'U', 'Y'};
         boolean r = false;
         for(char c: vowels){
             if (sym == c)
