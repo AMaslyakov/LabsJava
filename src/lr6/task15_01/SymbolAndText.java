@@ -25,7 +25,5 @@ public class SymbolAndText {
     }
 
     public void printText(){
-        System.out.println("text:\n" + text);
-    }
-
+        System.out.println("text:\n" + text);}
 }

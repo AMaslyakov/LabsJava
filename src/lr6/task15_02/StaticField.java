@@ -5,6 +5,5 @@ public class StaticField {
 
     public static void getField(){
         System.out.println(field);
-        field++;
-    }
+        field++;}
 }

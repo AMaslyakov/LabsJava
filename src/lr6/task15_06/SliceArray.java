@@ -1,7 +1,7 @@
 package src.lr6.task15_06;
 
 public class SliceArray {
-    public static int[] cat(int[] array, int N){
+    public static int[] cut(int[] array, int N){
         if(N > array.length){
             N = array.length;
         }
