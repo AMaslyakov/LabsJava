@@ -10,4 +10,9 @@ public class SuperClass {
     public void setFields(int arg){
         field = arg;
     }
+
+    public String toString(){
+        String ClassName = this.getClass().getSimpleName();
+        return String.format("Имя класс: %s\nПоле1: %d", ClassName, field);
+    }
 }

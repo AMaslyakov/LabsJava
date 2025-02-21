@@ -13,4 +13,10 @@ public class SubClass extends SuperClass {
         field2 = arg2;
         super.setFields(arg1);
     }
+
+    public String toString(){
+        String ClassName = this.getClass().getSimpleName();
+        return String.format("Имя класс: %s\nПоле1: %d\nПоле2: %s",
+                ClassName, field, field2);
+    }
 }
