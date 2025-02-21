@@ -5,4 +5,4 @@
 ## [Лабораторная работа №4](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr4)
 ## [Лабораторная работа №5](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr5)
 ## [Лабораторная работа №6](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr6)
-## [Лабораторная работа №6](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr7)
+## [Лабораторная работа №7](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr7)
