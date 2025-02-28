@@ -10,4 +10,4 @@
 ### [Лабораторная работа №7](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr7)
 
 ## Семестр 2
-### [Лабораторная работа №7](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr9)
+### [Лабораторная работа №9](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr9)
