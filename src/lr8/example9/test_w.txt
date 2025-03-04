@@ -1,0 +1,10 @@
+1: Super Mario World
+2: The Legend of Zelda: A Link to the Past
+3: Super Metroid
+4: Chrono Trigger
+5: Final Fantasy III
+6: Star Fox
+7: Donkey Kong Country
+8: Street Fighter II Turbo
+9: Castlevania: Dracula X
+10: Super Mario Kart
