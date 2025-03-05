@@ -3,15 +3,18 @@ package src.lr9.task5.example2;
 public class CreateFromTail {
 
     public static void main(String[] args) {
-    Node head = null;
-    for (int i = 8; i>=0; i--){
-        head = new Node(i, head);
+    Node head = new Node(0, null);
+    Node ref = head;
+    for (int i = 1; i<9; i++){
+        Node tail = new Node(i, null);
+        ref.next = tail;
+        ref = tail;
     }
 
-    Node ref = head;
-    while (ref != null){
+    Node ref2 = head;
+    while (ref2 != null){
         System.out.print(" " + ref.value);
-        ref = ref.next;
+        ref2 = ref.next;
     }
     }
 }

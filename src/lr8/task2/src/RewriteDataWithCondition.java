@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class Main {
+public class RewriteDataWithCondition {
     public static void main(String[] args) throws IOException {
         BufferedReader br = null;
         BufferedWriter bw = null;
@@ -35,7 +35,4 @@ public class Main {
         }finally {
             br.close();
             bw.flush();
-            bw.close();
-        }
-    }
-}
+            bw.close();}}}
