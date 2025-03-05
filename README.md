@@ -8,6 +8,8 @@
 ### [Лабораторная работа №5](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr5)
 ### [Лабораторная работа №6](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr6)
 ### [Лабораторная работа №7](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr7)
+### [Лабораторная работа №8](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr8)
+    (!Все примеры и задания выполнены в отдельных проектах)
 
 ## Семестр 2
 ### [Лабораторная работа №9](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr9)
