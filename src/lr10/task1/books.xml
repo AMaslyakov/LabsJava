@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<library>
+    <book>
+        <title>Автостопом по галактике</title>
+        <author>Дуглас Адамс</author>
+        <year>1979</year>
+    </book>
+    <book>
+        <title>Цвет волшебства</title>
+        <author>Терри Пратчетт</author>
+        <year>1983</year>
+    </book>
+</library>
