@@ -20,6 +20,7 @@ import java.util.List;
 
 public class SongsParserXML {
 
+    public static final String STYLE_XSLT = "src/lr10/task2/style.xslt";
     private final String NODE_SONG = "song";
     private final String NODE_TITLE = "title";
     private final String NODE_ARTIST = "artist";
@@ -27,12 +28,10 @@ public class SongsParserXML {
     private final String NODE_YEAR = "year";
     private Document document;
     private String filepath;
-    private File xmlfile;
 
     SongsParserXML(File file) throws ParserConfigurationException, IOException, SAXException {
         filepath = file.getAbsolutePath();
         document = create_document(file);
-        xmlfile = file;
     }
 
     private Document create_document(File file) throws ParserConfigurationException, IOException, SAXException {
@@ -96,7 +95,7 @@ public class SongsParserXML {
         library.appendChild(song);
 
         Transformer transformer = TransformerFactory.newInstance().newTransformer(
-                new StreamSource(new File("src/lr10/task2/style.xslt"))
+                new StreamSource(new File(STYLE_XSLT))
         );
 
         document.setXmlStandalone(true);
@@ -106,7 +105,7 @@ public class SongsParserXML {
         StreamResult result = new StreamResult(new File(filepath));
         transformer.transform(source, result);
 
-        System.out.println("Song added successfully!");
+        System.out.println("Песня добавлена!");
     }
 
     public List<Element> search_song(String artist){
@@ -138,7 +137,7 @@ public class SongsParserXML {
        root.removeChild(song);
 
         Transformer transformer = TransformerFactory.newInstance().newTransformer(
-                new StreamSource(new File("src/lr10/task2/style.xslt"))
+                new StreamSource(new File(STYLE_XSLT))
         );
 
         document.setXmlStandalone(true);
@@ -148,7 +147,7 @@ public class SongsParserXML {
         StreamResult result = new StreamResult(new File(filepath));
         transformer.transform(source, result);
 
-        System.out.println("Song remove successfully!");
+        System.out.println("Песня удалена!");
 
     }
 
