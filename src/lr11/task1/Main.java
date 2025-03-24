@@ -25,5 +25,4 @@ public class Main {
 
     public static int[] filterEvenNumbers(int[] numbers){
         return Arrays.stream(numbers).filter(n -> n % 2 == 0).toArray();
-    }
-}
+    }}
