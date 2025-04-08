@@ -18,20 +18,21 @@ public class Main {
     Scanner input = new Scanner(System.in);
     System.out.println("Введите размер массива для поиска минимального числа.");
     int[] big_array = getArray(input.nextInt());
-//  System.out.println(Arrays.toString(big_array));
 
   int cpus_num = defCpusNum();
 
-//  System.out.println("Ядер на машине: " + cpus_num);
 
 
   int MIN_LENGTH_ON_CORE = 4*cpus_num;
 
   if(big_array.length < MIN_LENGTH_ON_CORE){
-    System.out.println(Arrays.stream(big_array).min());
+     System.out.println("Минимальное значение массива: ");
+     System.out.println(Arrays.stream(big_array).min());
   }else{
 
-    int offset = big_array.length % cpus_num == cpus_num - 1  ? (big_array.length / cpus_num)+1 : big_array.length/cpus_num;
+    int offset = big_array.length % cpus_num == cpus_num - 1  ?
+                 (big_array.length / cpus_num)+1 :
+                 big_array.length/cpus_num;
 
     List<Thread> threads = new ArrayList<>();
     List<Result> results = new ArrayList<>();
@@ -44,7 +45,6 @@ public class Main {
       int[] chunk = Arrays.copyOfRange(big_array,
               i*offset,
               i < cpus_num - 1 ? (i+1)*offset : big_array.length);
-//      System.out.println(Arrays.toString(chunk));
       threads.add(new Thread(new MinFinder(chunk, results.get(i))));
     }
 
