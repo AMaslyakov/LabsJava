@@ -35,5 +35,5 @@ public class Main {
         } catch (ArrayStoreException e){
             System.out.println(e.getMessage());
         }
-        return Arrays.stream(array).average().getAsDouble();
+        return Arrays.stream(array).filter(e->e>0).average().getAsDouble();
     }}
