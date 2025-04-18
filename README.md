@@ -41,4 +41,7 @@ p - вывести список всех песен
 
 q - выйти
 
+### [Лабораторная работа №11](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr11)
+### [Лабораторная работа №12](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr12)
+### [Лабораторная работа №13](https://github.com/AMaslyakov/LabsJava/tree/main/src/lr13)
 
