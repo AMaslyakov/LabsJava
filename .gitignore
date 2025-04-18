@@ -4,3 +4,4 @@ LabsJava.iml
 /.classpath
 /.project
 tools/
+*.iml
