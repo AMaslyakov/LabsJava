@@ -15,5 +15,6 @@ public static void main(String[] args) {
     for(int i=0; i<h; i++){
       for (int j = 0; j < w; j++){rect[i][j] = '2';}
     }
-    for(char[] line: rect ){System.out.println(new String(line));}
+    for(char[] line: rect ){
+        System.out.println(new String(line));}
 }}

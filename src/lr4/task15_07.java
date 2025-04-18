@@ -25,5 +25,6 @@ public class task15_07 {
                     data++;}
             }}
         System.out.println("Массив заполнен змейкой:");
-        for(int[] row: matrix){System.out.println(Arrays.toString(row));
+        for(int[] row: matrix){
+            System.out.println(Arrays.toString(row));
         }}}

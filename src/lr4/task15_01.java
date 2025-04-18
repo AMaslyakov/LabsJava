@@ -10,12 +10,8 @@ public class task15_01 {
     public static void main(String[] args) {
      char[] chars = new char[width];
      for(int i=0; i <chars.length; i++){
-       chars[i] = filler;
-     }
+       chars[i] = filler;}
     String line = new String(chars);
-
     for (int i = 0; i < height; i++) {
-      System.out.println(line);
-    }
-    }
-}
+      System.out.println(line);}
+    }}

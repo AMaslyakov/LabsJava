@@ -1,6 +1,5 @@
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Files_ByteRW {
@@ -31,6 +30,4 @@ public class Files_ByteRW {
                         }
         }catch (Exception e){
             System.out.println(""+e);
-        }
-    }
-}
+        }}}

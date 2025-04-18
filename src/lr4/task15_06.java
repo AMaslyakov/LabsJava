@@ -11,8 +11,8 @@ public class task15_06 {
         Random random = new Random();
         for (int i=0; i<M; i++){
             for(int j=0; j<N; j++){
-                numbers[i][j] = random.nextInt(-1000,1000);
-            }}
+                numbers[i][j] = random.nextInt(-1000,1000);}
+        }
         return numbers;}
 
     public static int[][] remove_row_col(int[][] matrix){
@@ -29,11 +29,9 @@ public class task15_06 {
             for(int p=0; p<matrix[0].length; p++){
                 if(p == c){continue;}
                 result[i][j] = matrix[k][p];
-                j++;
-            }
+                j++;}
             i++;
-            j=0;
-        }
+            j=0;}
         return result;}
 
     public static void main(String[] args) {
@@ -45,7 +43,8 @@ public class task15_06 {
         int[][] matrix = create_random_array(M, N);
         System.out.println("Сгенерирован массив:");
         for(int[] row: matrix){System.out.println(Arrays.toString(row));}
-        int[][] new_matrix = remove_row_col(matrix);
+        int[][] random_minor = remove_row_col(matrix);
         System.out.println("Измененный массив:");
-        for(int[] row: new_matrix){System.out.println(Arrays.toString(row));}
-        }}
+        for(int[] row: random_minor) {
+            System.out.println(Arrays.toString(row));
+        }}}

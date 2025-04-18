@@ -8,7 +8,7 @@ public class Main {
     long[] result = new long[N];
     for(int i=0; i<N; i++){
        result[i] = i+1;}
-    return result;  }
+    return result;}
 
 
   public static void main(String[] args) {
@@ -41,8 +41,7 @@ public class Main {
     List<Result> results = new ArrayList<>();
 
     for(int i=0; i< cpus_num; i++){
-      results.add(new Result());
-    }
+      results.add(new Result());}
 
     for(int i=0; i<cpus_num; i++){
       int diff = reminder > 0 ? 1 : 0;
@@ -50,24 +49,20 @@ public class Main {
               i*offset,
               (i+1)*offset + diff);
       threads.add(new Thread(new Summator(chunk, results.get(i))));
-      reminder--;
-    }
+      reminder--;}
 
     for(Thread thread: threads){
-      thread.start();
-    }
+      thread.start();}
 
     for(Thread thread: threads){
-      thread.join();
-    }
+      thread.join();}
 
-    long arraySum = results.stream().map(Result::toInt).reduce(Long::sum).orElseThrow();
-    System.out.println("Сумма значений массива: " +  arraySum);
-    return arraySum;
-  }
+      return results.stream()
+              .map(Result::toInt)
+              .reduce(Long::sum)
+              .orElseThrow();}
 
     private static int getCpusCount(){
-      return Runtime.getRuntime().availableProcessors();
-    }
+      return Runtime.getRuntime().availableProcessors();}
 }
 

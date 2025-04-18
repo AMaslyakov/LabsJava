@@ -20,14 +20,14 @@ import java.util.List;
 
 public class SongsParserXML {
 
-    public static final String STYLE_XSLT = "src/lr10/task2/style.xslt";
-    private final String NODE_SONG = "song";
-    private final String NODE_TITLE = "title";
-    private final String NODE_ARTIST = "artist";
-    private final String NODE_ALBUM = "album";
-    private final String NODE_YEAR = "year";
-    private Document document;
-    private String filepath;
+    private static final String STYLE_XSLT = "src/lr10/task2/style.xslt";
+    private static final String NODE_SONG = "song";
+    private static final String NODE_TITLE = "title";
+    private static final String NODE_ARTIST = "artist";
+    private static final String NODE_ALBUM = "album";
+    private static final String NODE_YEAR = "year";
+    private static Document document;
+    private static String filepath;
 
     SongsParserXML(File file) throws ParserConfigurationException, IOException, SAXException {
         filepath = file.getAbsolutePath();
@@ -104,7 +104,6 @@ public class SongsParserXML {
         DOMSource source = new DOMSource(document);
         StreamResult result = new StreamResult(new File(filepath));
         transformer.transform(source, result);
-
         System.out.println("Песня добавлена!");
     }
 

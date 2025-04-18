@@ -1,4 +1,4 @@
-package src.lr9.example3;
+package src.lr9.task1.example3;
 
 public class Recursion {
     private static int step = 0;

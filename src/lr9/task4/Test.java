@@ -14,7 +14,4 @@ public class Test {
         Node ref = node0;
         while (ref != null){
             System.out.println(" " + ref.value);
-            ref = ref.next;
-        }
-    }
-}
+            ref = ref.next;}}}

@@ -33,8 +33,10 @@ public class task15_05 {
         int N = input.nextInt();
         int[][] matrix = create_random_array(M, N);
         System.out.println("Сгенерирован массив:");
-        for(int[] row: matrix){System.out.println(Arrays.toString(row));}
+        for(int[] row: matrix){
+            System.out.println(Arrays.toString(row));}
         int[][] t_matrix = transpose(matrix);
         System.out.println("Строки стали столбцами:");
-        for(int[] row: t_matrix){System.out.println(Arrays.toString(row));}
+        for(int[] row: t_matrix){
+            System.out.println(Arrays.toString(row));}
         }}

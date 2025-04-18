@@ -1,6 +1,5 @@
 package src.lr12.task4;
 
-
 import java.util.ArrayList;
 import java.util.List;
 

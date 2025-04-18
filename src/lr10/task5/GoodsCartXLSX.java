@@ -18,7 +18,7 @@ public class GoodsCartXLSX {
     private static XSSFWorkbook document;
 
 
-    GoodsCartXLSX(String filepath) throws IOException {
+    GoodsCartXLSX(String filepath) throws IOException, IllegalArgumentException {
         check_file(filepath);
         document = new XSSFWorkbook(new FileInputStream(filepath));
     }
@@ -40,7 +40,7 @@ public class GoodsCartXLSX {
     }
 
 
-    public void print_goods(){
+    public void print_goods() throws IOException {
        XSSFSheet sheet = get_sheet(MAIN_SHEET);
        FormulaEvaluator evaluator = document.getCreationHelper().createFormulaEvaluator();
        if(sheet == null){
@@ -66,5 +66,6 @@ public class GoodsCartXLSX {
                    System.out.println();
            }
        }
+       document.close();
     }
 }

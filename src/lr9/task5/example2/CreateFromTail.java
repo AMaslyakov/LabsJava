@@ -11,10 +11,7 @@ public class CreateFromTail {
         ref = tail;
     }
 
-    Node ref2 = head;
-    while (ref2 != null){
-        System.out.print(" " + ref.value);
-        ref2 = ref.next;
-    }
-    }
-}
+    Node tmp = head;
+    while (tmp != null){
+        System.out.print(" " + tmp.value);
+        tmp = tmp.next;}}}

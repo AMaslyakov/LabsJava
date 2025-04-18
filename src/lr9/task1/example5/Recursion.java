@@ -1,4 +1,4 @@
-package src.lr9.example5;
+package src.lr9.task1.example5;
 
 public class Recursion {
     public static void main(String[] args) {
@@ -6,8 +6,11 @@ public class Recursion {
     }
 
     public static int fib(int n){
-        if(n==0){return 0;}
-        else if(n==1){return 1;}
+        System.out.println("n = " + n);
+        if(n==0){
+            return 0;}
+        else if(n==1){
+            return 1;}
         else{
             return fib(n-2) + fib(n-1);
         }

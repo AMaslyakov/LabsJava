@@ -6,7 +6,6 @@ import java.util.Scanner;
 public class EverySecondLinkedList {
     public static void main(String[] args) {
         
-    
     Scanner input = new Scanner(System.in);
     System.out.println("Введите количество людей стоящих в кругу:");
     int N = input.nextInt();
@@ -18,10 +17,8 @@ public class EverySecondLinkedList {
     private static LinkedList<Integer> getList(int n) {
         LinkedList<Integer> count = new LinkedList<>();
         for(int i=1; i<=n; i++){
-            count.add(i);
-        }
-        return count;
-    }
+            count.add(i);}
+        return count;}
 
     private static int deleteEverySecond(LinkedList<Integer> count) {
         int i=0;
@@ -32,7 +29,4 @@ public class EverySecondLinkedList {
         }
         long end_time = System.currentTimeMillis();
         System.out.println(end_time-start_time + " мс.");
-        return count.getFirst();
-
-    }
-}
+        return count.getFirst();}}

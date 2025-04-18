@@ -26,6 +26,6 @@ public class Main {
     public static List<String> findOnlyLetters(List<String> list){
        return  list.stream().filter(s->{
            char[] a = s.toCharArray();
-           for(Character c: a) if(!Character.isLetter(c)) return false;
+           for(char c: a) if(!Character.isLetter(c)) return false;
            return true;
        }).toList();}}

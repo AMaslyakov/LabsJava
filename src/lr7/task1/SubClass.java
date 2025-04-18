@@ -1,7 +1,6 @@
 package src.lr7.task1;
 
 import java.util.Objects;
-
 import static java.lang.String.*;
 
 public class SubClass extends SuperClass {

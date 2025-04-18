@@ -7,18 +7,14 @@ public class task15_08 {
     static String encrypt(String text, int key){
         char[] symbols = text.toCharArray();
         for(int i=0; i<symbols.length; i++){
-            symbols[i] += key;
-        }
-        return new String(symbols);
-    }
+            symbols[i] += key;}
+        return new String(symbols);}
 
     static String decrypt(String enc_text, int key){
         char[] symbols = enc_text.toCharArray();
         for(int i=0; i<symbols.length; i++){
-            symbols[i] -= key;
-        }
-        return new String(symbols);
-    }
+            symbols[i] -= key;}
+        return new String(symbols);}
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -41,8 +37,5 @@ public class task15_08 {
             } else {
                 System.out.println("Введите корректный ответ (y/n)");
                 System.out.println("Выполнить обратное преобразование? ");
-                answer = input.next();
-            }
-        }
-    }
-}
+                answer = input.next();}
+        }}}

@@ -16,13 +16,7 @@ public class ReadXLSX {
         XSSFSheet sheet = workbook.getSheet("Товары");
 
         for(Row row: sheet){
-            for(Cell cell: row){
-                System.out.print(cell.toString() + "\t");
-            }
-            System.out.println();
-        }
-
+            for(Cell cell: row) System.out.print(cell.toString() + "\t");
+            System.out.println();}
         workbook.close();
-        inputStream.close();
-    }
-}
+        inputStream.close();}}

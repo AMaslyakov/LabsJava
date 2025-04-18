@@ -12,9 +12,9 @@ public static void main(String[] args) {
     char[][] triangle = new char[a][a];
     for(int i=0; i < triangle.length; i++){
         for(int j=0; j<triangle[i].length; j++){
-            if(j<=i){
-                triangle[i][j] = '#';
-            } else { triangle[i][j] = ' ';}
+            if(j<=i){triangle[i][j] = '#';}
+            else { triangle[i][j] = ' ';}
         }}
-    for(char[] line: triangle){System.out.println(line);
+    for(char[] line: triangle){
+        System.out.println(line);
     }}}
