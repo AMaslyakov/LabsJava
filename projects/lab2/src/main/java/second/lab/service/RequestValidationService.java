@@ -3,7 +3,7 @@ package second.lab.service;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 
-import second.lab.exception.UnsopportedCodeException;
+import second.lab.exception.UnsupportedCodeException;
 import second.lab.exception.ValidationFailedException;
 
 @Service
@@ -16,9 +16,9 @@ public class RequestValidationService implements ValidationService {
         }
     }
 
-    public void isUnsupported(String uid) throws UnsopportedCodeException{
+    public void isUnsupported(String uid) throws UnsupportedCodeException{
         if(uid.equals("123")){
-            throw new UnsopportedCodeException("Не допустимое значение!");
+            throw new UnsupportedCodeException("Не допустимое значение!");
     }
 
     }

@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
-import second.lab.exception.UnsopportedCodeException;
+import second.lab.exception.UnsupportedCodeException;
 import second.lab.exception.ValidationFailedException;
 import second.lab.model.Request;
 import second.lab.model.Response;
@@ -65,7 +65,7 @@ public class MyController {
                 response.setErrorCode("ValidationException");
                 response.setErrorMessage(messageError);
                 return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
-            } catch (UnsopportedCodeException e) {
+            } catch (UnsupportedCodeException e) {
                 response.setCode("failed");
                 response.setErrorCode("UnsupportedCodeException");
                 response.setErrorMessage(e.getMessage());
