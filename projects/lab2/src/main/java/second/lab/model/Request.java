@@ -16,11 +16,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Request {
 
-    @NotBlank
+    @NotBlank(message = "uid не может быть пустым")
     @Size(max = 32, message = "uid обязательно, длина не более 32 символов")
     private String uid;
     
-    @NotBlank
+    @NotBlank(message = "operationUid не может быть пустым")
     @Size(max = 32, message = "operationUid обязательно, длина не более 32 символов")
     private String operationUid;
 

@@ -18,7 +18,7 @@ public class RequestValidationService implements ValidationService {
 
     public void isUnsupported(String uid) throws UnsupportedCodeException{
         if(uid.equals("123")){
-            throw new UnsupportedCodeException("Не допустимое значение!");
+            throw new UnsupportedCodeException("Не допустимое значение uid!");
     }
 
     }
