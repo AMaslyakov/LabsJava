@@ -22,6 +22,7 @@ import third.lab.exception.ValidationFailedException;
 import third.lab.model.Request;
 import third.lab.model.Response;
 import third.lab.service.ValidationService;
+import util.DateTimeUtil;
 
 @RestController
 public class MyController {
@@ -40,13 +41,10 @@ public class MyController {
         @Valid @RequestBody Request request,
         BindingResult bindingResult
         ){
-
-            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SS'Z'");
-
             Response response = Response.builder()
             .uid(request.getUid())
             .operationUid(request.getOperationUid())
-            .systemTime(simpleDateFormat.format(new Date()))
+            .systemTime(DateTimeUtil.getCustomFormat().format(new Date()))
             .code("Success")
             .errorCode("")
             .errorMessage("")
