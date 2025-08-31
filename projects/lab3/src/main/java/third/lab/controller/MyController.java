@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import third.lab.exception.UnsupportedCodeException;
 import third.lab.exception.ValidationFailedException;
 import third.lab.model.Codes;
@@ -23,6 +24,7 @@ import third.lab.service.ModifyResponseService;
 import third.lab.service.ValidationService;
 import util.DateTimeUtil;
 
+@Slf4j
 @RestController
 public class MyController {
 
@@ -42,6 +44,8 @@ public class MyController {
         @Valid @RequestBody Request request,
         BindingResult bindingResult
         ){
+            log.info("request: {}", request);
+
             Response response = Response.builder()
             .uid(request.getUid())
             .operationUid(request.getOperationUid())
