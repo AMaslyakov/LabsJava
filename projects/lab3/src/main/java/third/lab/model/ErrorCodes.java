@@ -23,5 +23,4 @@ public enum ErrorCodes {
     public String toString(){
         return name;
     }
-
 }
