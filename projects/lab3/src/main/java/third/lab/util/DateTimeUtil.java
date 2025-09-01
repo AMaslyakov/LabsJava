@@ -1,4 +1,4 @@
-package util;
+package third.lab.util;
 
 import java.text.SimpleDateFormat;
 

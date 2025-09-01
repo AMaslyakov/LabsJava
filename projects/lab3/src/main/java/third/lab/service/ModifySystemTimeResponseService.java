@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import third.lab.model.Response;
-import util.DateTimeUtil;
+import third.lab.util.DateTimeUtil;
 
 @Service
 @Qualifier("ModifySystemTimeResponseService")
