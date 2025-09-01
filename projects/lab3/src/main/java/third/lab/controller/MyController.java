@@ -45,6 +45,7 @@ public class MyController {
         BindingResult bindingResult
         ){
             log.info("request: {}", request);
+            log.info("Создается объект Response");
 
             Response response = Response.builder()
             .uid(request.getUid())
@@ -55,6 +56,7 @@ public class MyController {
             .errorMessage(ErrorMessages.EMPTY)
             .build();
 
+            log.info("response:{}", response);
 
             try{
                 validationService.isUnsupported(request.getUid());
@@ -79,7 +81,10 @@ public class MyController {
             }
             
         
+            log.info("Объект Request валидный, передается в ModifyResponseService");
+            log.info("До модификации response: %s", response);
             modifyResponseService.modify(response);
+            log.info("После модификации response: %s", response);
 
             return new ResponseEntity<>(response, HttpStatus.OK);
         }
