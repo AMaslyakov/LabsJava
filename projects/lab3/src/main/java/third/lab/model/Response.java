@@ -18,17 +18,13 @@ public class Response {
 
 @Override
 public String toString(){
-    return String.format("response:{uid: %s, " +
-    "operationUid:%s," + 
-    "systemTime:%s," + 
-    "code: %s," +
-    "errorCode: %s" +
-    "errorMessage: %s}",
-    uid, 
-    operationUid.toString(),
-    systemTime.toString(),
-    code.toString(),
-    errorCode.toString(), errorMessage.toString()
+    return String.format("Response{uid=%s, operationUid=%s, systemTime=%s, code=%s, errorCode=%s, errorMessage=%s}",
+        uid, 
+        operationUid,
+        systemTime,
+        code.getName(),
+        errorCode.getName(),
+        errorMessage.getName()
     );
 }
 
