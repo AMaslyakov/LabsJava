@@ -59,24 +59,28 @@ public class MyController {
             log.info("response:{}", response);
 
             try{
+                log.info("Проверка Uid");
                 validationService.isUnsupported(request.getUid());
+                log.info("Валидация запроса");
                 validationService.isValid(bindingResult);
             }catch(ValidationFailedException e){
-
                 response.setCode(Codes.FAILED);
                 response.setErrorCode(ErrorCodes.VALIDATION_EXCEPTION);
                 response.setErrorMessage(ErrorMessages.VALIDATION);
+                log.info("response: %s", response);
                 return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
             } catch (UnsupportedCodeException e) {
                 response.setCode(Codes.FAILED);
                 response.setErrorCode(ErrorCodes.UNSUPPORTED_EXCEPTION);
                 response.setErrorMessage(ErrorMessages.UNSUPPORTED);
+                log.info("response: %s", response);
                 return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
             } 
             catch (Exception e){
                 response.setCode(Codes.FAILED);
                 response.setErrorCode(ErrorCodes.UNKNOWN_EXCEPTION);
                 response.setErrorMessage(ErrorMessages.UNKNOWN);
+                log.info("response: %s", response);
                 return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
             }
             

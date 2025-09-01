@@ -9,10 +9,10 @@ import third.lab.exception.ValidationFailedException;
 @Service
 public class RequestValidationService implements ValidationService {
 
+    @SuppressWarnings("null")
     public void isValid(BindingResult bindingResult) throws ValidationFailedException{
         if(bindingResult.hasErrors()){
-            throw new
-                ValidationFailedException(bindingResult.getFieldError().toString());
+            throw new ValidationFailedException(bindingResult.getFieldError().toString());
         }
     }
 
