@@ -34,6 +34,7 @@ public enum Systems {
         }
         for(Systems system : Systems.values()){
             if(system.name().equalsIgnoreCase(value) || system.getName().equalsIgnoreCase(value)){
+                log.info("Тип системы: " + system.name);
                 return system;
             }
         }
