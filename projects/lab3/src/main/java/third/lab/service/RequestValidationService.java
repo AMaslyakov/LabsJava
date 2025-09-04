@@ -15,12 +15,11 @@ public class RequestValidationService implements ValidationService {
     public void isValid(BindingResult bindingResult) throws ValidationFailedException{
         if(bindingResult.hasErrors()){
             log.error("Запрос не валиден!");
-                        log.error("Ошибки валидации: errors: {}",
-                                  bindingResult
-                                         .getAllErrors()
-                                         .stream()
-                                         .map(error -> error.getDefaultMessage())
-                                         .collect(java.util.stream.Collectors.joining("; ")));
+            log.error("Ошибки валидации: errors: {}",
+                        bindingResult.getAllErrors()
+                                     .stream()
+                                     .map(error -> error.getDefaultMessage())
+                                     .collect(java.util.stream.Collectors.joining("; ")));
             throw new ValidationFailedException(bindingResult.getFieldError().toString());
         }
     }
