@@ -20,6 +20,7 @@ import third.lab.model.ErrorCodes;
 import third.lab.model.ErrorMessages;
 import third.lab.model.Request;
 import third.lab.model.Response;
+import third.lab.service.ModifyRequestService;
 import third.lab.service.ModifyResponseService;
 import third.lab.service.ValidationService;
 import third.lab.util.DateTimeUtil;
@@ -30,13 +31,16 @@ public class MyController {
 
     private final ValidationService validationService;
     private final ModifyResponseService modifyResponseService;
+    private final ModifyRequestService modifyRequestService;
 
 
     @Autowired
     public MyController(ValidationService validationService,
-    @Qualifier("ModifySystemTimeResponseService") ModifyResponseService modifyResponseService){
+    @Qualifier("ModifySystemTimeResponseService") ModifyResponseService modifyResponseService,
+    ModifyRequestService modifyRequestService){
         this.validationService = validationService;
         this.modifyResponseService = modifyResponseService;
+        this.modifyRequestService = modifyRequestService;
     }
 
     @PostMapping(value="/feedback")
@@ -83,15 +87,13 @@ public class MyController {
                 log.info("response: {}", response);
                 return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
             }
-            
         
             log.info("Объект Request валидный, передается в ModifyResponseService");
             log.info("До модификации response: {}", response);
             modifyResponseService.modify(response);
+            modifyRequestService.modify(request);
             log.info("После модификации response: {}", response);
 
             return new ResponseEntity<>(response, HttpStatus.OK);
         }
-    
-
 }

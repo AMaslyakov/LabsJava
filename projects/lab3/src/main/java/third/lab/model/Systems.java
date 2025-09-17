@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public enum Systems {
+    SERVICE_ONE("Service 1"),
     ERP("Enterprise Resousrce Planning"),
     CRM("Customer Relashionship Managment"),
     WMS("Warehouse Managment System");
