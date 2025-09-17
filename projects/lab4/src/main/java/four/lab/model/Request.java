@@ -24,8 +24,7 @@ public class Request {
     @Size(max = 32, message = "operationUid обязательно, длина не более 32 символов")
     private String operationUid;
 
-    @NotNull(message = "Укажите тип системы: CRM, ERP, WMS")
-    private Systems systemName;
+    private String systemName;
     
     private String systemTime;
     
