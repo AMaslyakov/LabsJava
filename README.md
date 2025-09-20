@@ -5,3 +5,5 @@
 
 ### [Лабораторная работа №1: Первое Spring Boot приложение](https://github.com/AMaslyakov/LabsJava/tree/main/projects/lab1/src/main/java/com/example/lab1)
 ### [Лабораторная работа №2: Простой Rest сервис](https://github.com/AMaslyakov/LabsJava/tree/main/projects/lab2)
+### [Лабораторная работа №3: Доработка Rest сервиса](https://github.com/AMaslyakov/LabsJava/tree/main/projects/lab3)
+### [Лабораторная работа №4: Доработка Rest сервиса](https://github.com/AMaslyakov/LabsJava/tree/main/projects/lab4)
