@@ -1,6 +1,7 @@
 package four.lab.controller;
 
 import java.util.Date;
+import java.text.ParseException;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -45,8 +46,19 @@ public class MyController {
         BindingResult bindingResult
         ){
             log.info("request: {}", request);
-            log.info("Создается объект Response");
-
+            
+            String time_now = DateTimeUtil.getCustomFormat().format(new Date());
+            
+            try {
+                Date startTime = DateTimeUtil.getCustomFormat().parse(request.getSystemTime());
+                Date nowTime = DateTimeUtil.getCustomFormat().parse(time_now);
+                long timeDifferenceMs = nowTime.getTime() - startTime.getTime();
+                log.info("Отправка запроса заняла: {} миллисекунд", timeDifferenceMs);
+            } catch (ParseException e) {
+                log.error("Ошибка при парсинге времени: {}", e.getMessage());
+            }
+            
+            
             Response response = Response.builder()
             .uid(request.getUid())
             .operationUid(request.getOperationUid())

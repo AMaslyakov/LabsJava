@@ -5,10 +5,14 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Qualifier;
 
 import lombok.extern.slf4j.Slf4j;
 import third.lab.model.Request;
+import third.lab.util.DateTimeUtil;
 
 @Slf4j
 @Service
@@ -18,6 +22,7 @@ public class ModifySourceRequestService implements ModifyRequestService{
     @Override
     public void modify(Request request){
         request.setSource("Source 1");
+        request.setSystemTime(DateTimeUtil.getCustomFormat().format(new Date()));
 
         log.debug("modify request = {}", request);
         
