@@ -31,6 +31,12 @@ public class Request {
     
     private String source;
     
+    private Positions position;
+
+    private Double salary;
+
+    private Double bonus;
+    
     @NotNull
     @Min(value = 1, message = "comuncationId минимальное значение: 1")
     @Max(value = 100000, message = "communicationId не может быть более: 100 000")
