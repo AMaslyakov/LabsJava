@@ -36,6 +36,8 @@ public class Request {
     private Double salary;
 
     private Double bonus;
+
+    private int workDays;
     
     @NotNull
     @Min(value = 1, message = "comuncationId минимальное значение: 1")
