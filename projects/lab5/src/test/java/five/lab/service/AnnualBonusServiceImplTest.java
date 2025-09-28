@@ -21,4 +21,16 @@ public class AnnualBonusServiceImplTest {
         assertThat(result).isEqualTo(expected);
         
     }
+
+    @Test
+    void testCalculateQuarterlyBonus(){
+        AnnualBonusServiceImpl service = new AnnualBonusServiceImpl();
+        
+        double resultManager = service.calculateQuarterlyBonus(Positions.TL, 100000.0, 2.0, 243);
+        double resultNonManager = service.calculateQuarterlyBonus(Positions.DEV, 100000.0, 2.0, 243);
+        
+        double expectedManager = 192592.59259259258;
+        assertThat(resultManager).isEqualTo(expectedManager);
+        assertThat(resultNonManager).isEqualTo(0.0);
+    }
 }

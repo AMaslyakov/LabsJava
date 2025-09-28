@@ -25,6 +25,8 @@ public class AnnualBonusServiceImpl implements AnnualBonusService {
         
         int quarterlyDays = 90;
         log.info("Расчет квартальной премии для менеджера: {}", position);
-        return salary * bonus * quarterlyDays * position.getPositionCoefficient() / workDays;
+        double result = salary * bonus * quarterlyDays * position.getPositionCoefficient() / workDays;
+        log.info("Результат расчета квартальной премии: {}", result);
+        return result;
     }
 }
