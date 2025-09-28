@@ -10,9 +10,21 @@ public class AnnualBonusServiceImpl implements AnnualBonusService {
 
     @Override
     public double calculate(Positions position, double salary, double bonus, int workDays){
-        Year year = Year.parse("2025");
+        Year year = Year.now();
         int daysYear = year.length();
         log.info("Дней в году: {}", daysYear);
         return salary * bonus * daysYear * position.getPositionCoefficient()/ workDays;
+    }
+    
+    @Override
+    public double calculateQuarterlyBonus(Positions position, double salary, double bonus, int workDays){
+        if (!position.isManager()) {
+            log.warn("Квартальная премия доступна только для менеджеров. Позиция {} не является менеджерской", position);
+            return 0.0;
+        }
+        
+        int quarterlyDays = 90;
+        log.info("Расчет квартальной премии для менеджера: {}", position);
+        return salary * bonus * quarterlyDays * position.getPositionCoefficient() / workDays;
     }
 }
