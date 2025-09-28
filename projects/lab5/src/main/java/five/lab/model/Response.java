@@ -16,6 +16,8 @@ public class Response {
     private String systemTime;
     // Годовая премия
     private Double annualBonus;
+    // Квартальная премия
+    private Double quartarlyBonus;
     // Код ответа сервера
     private Codes code;
     // Код ошибки 

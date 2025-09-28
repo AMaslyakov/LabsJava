@@ -4,8 +4,10 @@ import java.time.Year;
 
 import five.lab.model.Positions;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 @Slf4j
+@Service
 public class AnnualBonusServiceImpl implements AnnualBonusService {
 
     @Override
@@ -25,7 +27,7 @@ public class AnnualBonusServiceImpl implements AnnualBonusService {
         
         int quarterlyDays = 90;
         log.info("Расчет квартальной премии для менеджера: {}", position);
-        double result = salary * bonus * quarterlyDays * position.getPositionCoefficient() / workDays;
+        double result = salary * bonus * quarterlyDays * position.getPositionCoefficient() / (workDays/4);
         log.info("Результат расчета квартальной премии: {}", result);
         return result;
     }
