@@ -8,12 +8,19 @@ import lombok.Data;
 @Builder
 public class Response {
 
+    // Уникальный индетфикатор собщения
     private String uid;
+    // Уникальный идентфикатор операции
     private String operationUid;
+    // Время обращения запроса
     private String systemTime;
-    private Codes code;
+    // Годовая премия
     private Double annualBonus;
+    // Код ответа сервера
+    private Codes code;
+    // Код ошибки 
     private ErrorCodes errorCode;
+    // Cообщение ошибки
     private ErrorMessages errorMessage;
 
 
