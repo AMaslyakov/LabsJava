@@ -14,15 +14,15 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     
-    @Column(name = "name")
+    @Column(name = "name", nullable = false)
     private String name;
     
-    @Column(name = "surname")
+    @Column(name = "surname", nullable = false)
     private String surname;
 
-    @Column(name = "faculty")
+    @Column(name = "faculty", nullable = false)
     private String faculty;
 
-    @Column(name = "age")
+    @Column(name = "age", nullable = false)
     private Integer age;
 }

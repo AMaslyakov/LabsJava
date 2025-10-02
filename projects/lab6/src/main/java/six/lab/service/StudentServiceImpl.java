@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import response.CustomResponse;
 import six.lab.dao.StudentDAO;
 import six.lab.entity.Student;
 
@@ -13,20 +14,29 @@ public class StudentServiceImpl implements StudentService {
 
     @Autowired
     private StudentDAO studentDAO;
+    
 
     @Override
-    public List<Student> getAllStudents() {
-        return studentDAO.getAllStudents();
+    public CustomResponse<List<Student>> getAllStudents() {
+        List<Student> students = studentDAO.getAllStudents();
+        return CustomResponse.success("Удача! Список всех студентов!", students);
     }
 
     @Override
-    public Student saveStudent(Student student) {
-        return studentDAO.saveStudent(student);
+    public CustomResponse<Student> saveStudent(Student student) {
+        try{
+            studentDAO.saveStudent(student);
+            return CustomResponse.success("Удача!!!" ,student);
+        } catch (Exception e) {
+            return CustomResponse.fail("Не удача!!! Объект не сохранен!", student);
+        }
     }
 
     @Override
-    public Student getStudent(int id) {
-        return studentDAO.getStudent(id);
+    public CustomResponse<Student> getStudent(int id) {
+        Student student = studentDAO.getStudent(id);
+        if(student != null) return CustomResponse.success("Удача! Получена информация о студенте", student);
+        else return CustomResponse.fail("Не удача! Такого студента не существует!", student);
     }
 
     @Override
