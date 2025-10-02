@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import response.CustomResponse;
 import six.lab.entity.Student;
+import six.lab.response.CustomResponse;
 import six.lab.service.StudentService;
 
 @RestController

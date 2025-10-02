@@ -1,4 +1,4 @@
-package response;
+package six.lab.response;
 
 import lombok.Getter;
 

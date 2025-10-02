@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import response.CustomResponse;
 import six.lab.dao.StudentDAO;
 import six.lab.entity.Student;
+import six.lab.response.CustomResponse;
 
 @Service
 public class StudentServiceImpl implements StudentService {

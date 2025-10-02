@@ -4,8 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import response.CustomResponse;
 import six.lab.entity.Student;
+import six.lab.response.CustomResponse;
 
 @Service
 public interface StudentService {
