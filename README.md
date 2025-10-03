@@ -7,3 +7,6 @@
 ### [Лабораторная работа №2: Простой Rest сервис](https://github.com/AMaslyakov/LabsJava/tree/main/projects/lab2)
 ### [Лабораторная работа №3: Доработка Rest сервиса](https://github.com/AMaslyakov/LabsJava/tree/main/projects/lab3)
 ### [Лабораторная работа №4: Доработка Rest сервиса](https://github.com/AMaslyakov/LabsJava/tree/main/projects/lab4)
+### [Лабораторная работа №5: Доработка Rest сервиса](https://github.com/AMaslyakov/LabsJava/tree/main/projects/lab5)
+### [Лабораторная работа №6: Работа с базой данных. REST Full сервис.](https://github.com/AMaslyakov/LabsJava/tree/main/projects/lab6)
+
